@@ -67,4 +67,36 @@
   .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
   }
+  .capsule-div {
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  @media (max-width: 640px) {
+    .capsule-div {
+      bottom: 10px;
+    }
+  }
+  .capsule {
+    width: 35px;
+    height: 64px;
+    border-radius: 24px;
+    border: 4px solid #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2px;
+  }
+  .point-ball{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 16px; /* Assuming 'w-3' corresponds to this width */
+  height: 16px; /* Assuming 'h-3' corresponds to this height */
+  border-radius: 50%; /* 'rounded-full' makes the div fully rounded */
+  background-color: #fff; /* Assuming 'bg-secondary' corresponds to this color */
+  margin-bottom: 4px; /* Assuming 'mb-1' corresponds to this margin */
+  }

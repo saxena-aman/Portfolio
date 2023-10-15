@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-scroll";
 import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import "animate.css";
+import { motion } from "framer-motion";
 import TrackVisibility from "react-on-screen";
+import "animate.css";
 import "../styles/banner.css";
 export default function Banner() {
   const [loopNum, setLoopNum] = useState(0);
@@ -85,11 +87,16 @@ export default function Banner() {
                     </span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    Welcome to the cosmos of my creation, Where ideas take
+                    flight, in vivid animation. I'm Aman, a developer, crafting
+                    with elation, Using React.JS for seamless application. With
+                    AWS Amplify, I elevate my station, Ensuring scalability
+                    across every iteration. And with Three.js, I add a new
+                    dimension, Bringing 3D effects to life with dedication. This
+                    space is still under transformation, As I code my journey,
+                    and my imagination. So stay awhile, explore my
+                    constellation, Where tech and creativity meet in perfect
+                    formation.
                   </p>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
@@ -112,6 +119,23 @@ export default function Banner() {
             </TrackVisibility>
           </Col>
         </Row>
+        <Link to="about" spy={true} smooth={true} duration={50}>
+          <div className="capsule-div">
+            <div className="capsule">
+              <motion.div
+                animate={{
+                  y: [0, 36, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+                className="point-ball"
+              />
+            </div>
+          </div>
+        </Link>
       </Container>
     </section>
   );
