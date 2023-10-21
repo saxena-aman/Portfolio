@@ -119,7 +119,7 @@ const experiences = [
     company_name: "HIGHRADIUS CORPORATION",
     icon: highradius,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Jan 2022 - Mar 2022",
     points: [
       "Developed an AI-based platform where businesses can predict the payout of the receipt that is created.",
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -133,7 +133,7 @@ const experiences = [
     company_name: "RESONAR AUTOMATION",
     icon: resonar,
     iconBg: "#E6DEDD",
-    date: "Jan 2022 - Jan 2023",
+    date: "Apr 2022 - Jul 2022",
     points: [
       "Developed an IoT based Home Automation Device using AWS IoT service and ESP-32 micro-controller.",
       "Research and Development Team Lead.",

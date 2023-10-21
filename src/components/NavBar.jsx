@@ -37,7 +37,16 @@ export default function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
+          {/* <Nav className="ms-auto"> */}
+          <Nav
+            className="ms-auto"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
             <Nav.Link
               href="#home"
               className={
@@ -67,7 +76,15 @@ export default function NavBar() {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <div className="social-icon">
+            <div
+              className="social-icon"
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
               <a href="https://www.linkedin.com/in/dev-aman/">
                 <img src={navIcon1} alt="" />
               </a>
