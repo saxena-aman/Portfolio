@@ -63,7 +63,11 @@ export default function Banner() {
   };
 
   return (
-    <section className="banner" id="home">
+    <section
+      className="banner"
+      id="home"
+      style={{ transform: "translateY(-80px)" }}
+    >
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
