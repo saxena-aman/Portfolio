@@ -25,8 +25,10 @@ function App() {
         <Element name="about">
           <About />
         </Element>
-        {/* <Experience />
-        <Tech />
+        <Element name="experience">
+          <Experience />
+        </Element>
+        {/* <Tech />
         <Works />
         <Feedbacks /> */}
         {/* <div className="relative z-0">
