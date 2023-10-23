@@ -57,22 +57,22 @@ export default function NavBar() {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#skills"
-              className={
-                activeLink === "skills" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("skills")}
-            >
-              Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
+              href="#experience"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("projects")}
             >
-              Projects
+              Experience
+            </Nav.Link>
+            <Nav.Link
+              href="#contact"
+              className={
+                activeLink === "skills" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("skills")}
+            >
+              Contact
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -96,9 +96,11 @@ export default function NavBar() {
               </a>
             </div>
             <div>
-              <button className="vvd">
-                <span>Let’s Connect</span>
-              </button>
+              <a href="#contact">
+                <button className="vvd">
+                  <span>Let’s Connect</span>
+                </button>
+              </a>
             </div>
           </span>
         </Navbar.Collapse>

@@ -31,10 +31,10 @@ function App() {
         {/* <Tech />
         <Works />
         <Feedbacks /> */}
-        {/* <div className="relative z-0">
+        <div className="relative z-0" name="contact">
           <Contact />
           <StarsCanvas />
-        </div> */}
+        </div>
         <Element name="inprogress">
           <InProgress />
         </Element>
