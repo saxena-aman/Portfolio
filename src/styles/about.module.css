@@ -132,7 +132,7 @@
   background-color: #151030; /* replace with the actual color used for bg-tertiary */
   border-radius: 20px;
   padding: 5rem 3rem;
-  min-height: 280px;
+  height: 280px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
