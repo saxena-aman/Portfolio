@@ -48,8 +48,8 @@ const Contact = () => {
           borderRadius: "16px",
           width: "auto",
           height: "fit-content",
-          marginLeft: "55px",
-          marginRight: "14px",
+          marginLeft: "20px",
+          marginRight: "20px",
         }}
       >
         <p className={styles.sectionSubText}>Get in touch</p>
