@@ -37,6 +37,8 @@ const Contact = () => {
         gap: "10px",
         overflow: "hidden",
         height: "fit-content",
+        width: "auto",
+        margin: "auto",
       }}
     >
       <motion.div
