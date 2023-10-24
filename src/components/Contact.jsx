@@ -36,7 +36,7 @@ const Contact = () => {
         flexDirection: window.innerWidth <= 768 ? "column-reverse" : "row",
         gap: "10px",
         overflow: "hidden",
-        height: "fit-content",
+        height: window.innerWidth <= 768 ? "1000px" : "fit-content",
         width: "auto",
         margin: "auto",
       }}
