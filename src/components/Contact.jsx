@@ -166,7 +166,7 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      {/* <motion.div
+      <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         style={{
           flex: "1",
@@ -174,7 +174,7 @@ const Contact = () => {
         }}
       >
         <EarthCanvas />
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 };
