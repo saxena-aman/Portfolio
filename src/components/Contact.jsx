@@ -8,9 +8,9 @@ import { slideIn } from "../utils/motion";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+    Name: "",
+    Email: "",
+    Message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -25,9 +25,39 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    const formCopy = { ...form };
+    setForm({
+      Name: "",
+      Email: "",
+      Message: "",
+    });
+    setLoading(false);
+    try {
+      // Replace "YOUR_API_ENDPOINT" with the actual URL of your API endpoint
+      const response = await fetch(
+        "https://2uah8wlh8e.execute-api.ap-south-1.amazonaws.com/default/mailing-function",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formCopy),
+        }
+      );
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        // Optionally, you can reset the form after successful submission
+      } else {
+        console.error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div
@@ -77,8 +107,8 @@ const Contact = () => {
             </span>
             <input
               type="text"
-              name="name"
-              value={form.name}
+              name="Name"
+              value={form.Name}
               onChange={handleChange}
               placeholder="What's your good name?"
               style={{
@@ -104,8 +134,8 @@ const Contact = () => {
             </span>
             <input
               type="email"
-              name="email"
-              value={form.email}
+              name="Email"
+              value={form.Email}
               onChange={handleChange}
               placeholder="What's your email address?"
               style={{
@@ -131,8 +161,8 @@ const Contact = () => {
             </span>
             <textarea
               rows={2}
-              name="message"
-              value={form.message}
+              name="Message"
+              value={form.Message}
               onChange={handleChange}
               placeholder="What you want to say?"
               style={{
