@@ -72,162 +72,150 @@ const Contact = () => {
         height: window.innerWidth <= 768 ? "1000px" : "fit-content",
       }}
     >
-      <div
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
         style={{
-          width: window.innerWidth <= 768 ? "auto" : "750px",
+          flex: window.innerWidth <= 768 ? "1" : "0.75",
+          backgroundColor: "#1D1836",
+          padding: "20px",
+          borderRadius: "16px",
+          width: "auto",
+          height: "fit-content",
+          marginLeft: window.innerWidth <= 768 ? "20px" : "50px",
+          marginRight: "20px",
         }}
       >
-        <motion.div
-          variants={slideIn("left", "tween", 0.2, 1)}
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
           style={{
-            flex: window.innerWidth <= 768 ? "1" : "0.75",
-            backgroundColor: "#1D1836",
-            padding: "20px",
-            borderRadius: "16px",
-            width: "auto",
-            height: "fit-content",
-            marginLeft: window.innerWidth <= 768 ? "20px" : "50px",
-            marginRight: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
           }}
         >
-          <p className={styles.sectionSubText}>Get in touch</p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-            }}
-          >
-            <label style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 500,
-                  marginBottom: "1rem",
-                }}
-              >
-                Your Name
-              </span>
-              <input
-                type="text"
-                name="Name"
-                value={form.Name}
-                onChange={handleChange}
-                placeholder="What's your good name?"
-                style={{
-                  backgroundColor: "#333333",
-                  padding: "1rem 1.5rem",
-                  color: "#ffffff",
-                  borderRadius: "1rem",
-                  outline: "none",
-                  border: "none",
-                  fontWeight: 500,
-                }}
-              />
-            </label>
-            <label style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 500,
-                  marginBottom: "1rem",
-                }}
-              >
-                Your email
-              </span>
-              <input
-                type="email"
-                name="Email"
-                value={form.Email}
-                onChange={handleChange}
-                placeholder="What's your email address?"
-                style={{
-                  backgroundColor: "#333333",
-                  padding: "1rem 1.5rem",
-                  color: "#ffffff",
-                  borderRadius: "1rem",
-                  outline: "none",
-                  border: "none",
-                  fontWeight: 500,
-                }}
-              />
-            </label>
-            <label style={{ display: "flex", flexDirection: "column" }}>
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontWeight: 500,
-                  marginBottom: "1rem",
-                }}
-              >
-                Your Message
-              </span>
-              <textarea
-                rows={2}
-                name="Message"
-                value={form.Message}
-                onChange={handleChange}
-                placeholder="What you want to say?"
-                style={{
-                  backgroundColor: "#333333",
-                  padding: "1rem 1.5rem",
-                  color: "#ffffff",
-                  borderRadius: "1rem",
-                  outline: "none",
-                  border: "none",
-                  fontWeight: 500,
-                }}
-              />
-            </label>
-            {submitted && (
-              <div>
-                <p>
-                  My AI assistant will send you an email shortly in response to
-                  your message.
-                </p>
-                <p>
-                  Please check your Spam folder if you don't find it in your
-                  inbox.
-                </p>
-              </div>
-            )}
-            <button
-              type="submit"
+          <label style={{ display: "flex", flexDirection: "column" }}>
+            <span
               style={{
-                backgroundColor: "#333333",
-                padding: "0.75rem 2rem",
-                borderRadius: "1rem",
-                outline: "none",
-                width: "fit-content",
                 color: "#ffffff",
-                fontWeight: 700,
-                boxShadow:
-                  "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2)",
+                fontWeight: 500,
+                marginBottom: "1rem",
               }}
             >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
-        </motion.div>
-      </div>
-      <div
+              Your Name
+            </span>
+            <input
+              type="text"
+              name="Name"
+              value={form.Name}
+              onChange={handleChange}
+              placeholder="What's your good name?"
+              style={{
+                backgroundColor: "#333333",
+                padding: "1rem 1.5rem",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                outline: "none",
+                border: "none",
+                fontWeight: 500,
+              }}
+            />
+          </label>
+          <label style={{ display: "flex", flexDirection: "column" }}>
+            <span
+              style={{
+                color: "#ffffff",
+                fontWeight: 500,
+                marginBottom: "1rem",
+              }}
+            >
+              Your email
+            </span>
+            <input
+              type="email"
+              name="Email"
+              value={form.Email}
+              onChange={handleChange}
+              placeholder="What's your email address?"
+              style={{
+                backgroundColor: "#333333",
+                padding: "1rem 1.5rem",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                outline: "none",
+                border: "none",
+                fontWeight: 500,
+              }}
+            />
+          </label>
+          <label style={{ display: "flex", flexDirection: "column" }}>
+            <span
+              style={{
+                color: "#ffffff",
+                fontWeight: 500,
+                marginBottom: "1rem",
+              }}
+            >
+              Your Message
+            </span>
+            <textarea
+              rows={2}
+              name="Message"
+              value={form.Message}
+              onChange={handleChange}
+              placeholder="What you want to say?"
+              style={{
+                backgroundColor: "#333333",
+                padding: "1rem 1.5rem",
+                color: "#ffffff",
+                borderRadius: "1rem",
+                outline: "none",
+                border: "none",
+                fontWeight: 500,
+              }}
+            />
+          </label>
+          {submitted && (
+            <div>
+              <p>
+                My AI assistant will send you an email shortly in response to
+                your message.
+              </p>
+              <p>
+                Please check your Spam folder if you don't find it in your
+                inbox.
+              </p>
+            </div>
+          )}
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "#333333",
+              padding: "0.75rem 2rem",
+              borderRadius: "1rem",
+              outline: "none",
+              width: "fit-content",
+              color: "#ffffff",
+              fontWeight: 700,
+              boxShadow:
+                "0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
+      </motion.div>
+      <motion.div
+        variants={slideIn("left", "tween", 0.2, 1)}
         style={{
-          width: window.innerWidth <= 768 ? "400px" : "750px",
+          flex: "1",
+          height: window.innerWidth <= 768 ? "inherit" : "500px",
         }}
       >
-        <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
-          style={{
-            flex: "1",
-            height: window.innerWidth <= 768 ? "400px" : "500px",
-          }}
-        >
-          <EarthCanvas />
-        </motion.div>
-      </div>
+        <EarthCanvas />
+      </motion.div>
     </div>
   );
 };
