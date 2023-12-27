@@ -219,7 +219,7 @@ const Contact = () => {
         }}
       >
         <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
+          variants={slideIn("left", "tween", 0.2, 1)}
           style={{
             flex: "1",
             height: window.innerWidth <= 768 ? "400px" : "500px",
