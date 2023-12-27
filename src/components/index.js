@@ -11,6 +11,8 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
+import Card from "./Card";
+import Ticket from "./Ticket";
 
 export {
   Hero,
@@ -24,4 +26,6 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  Card,
+  Ticket,
 };

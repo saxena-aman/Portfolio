@@ -7,10 +7,9 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Tech,
-  Works,
   StarsCanvas,
+  Ticket,
 } from "./components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InProgress from "./components/InProgress";
@@ -25,12 +24,12 @@ function App() {
         <Element name="about">
           <About />
         </Element>
+        <Element name="Tech">
+          <Tech />
+        </Element>
         <Element name="experience">
           <Experience />
         </Element>
-        {/* <Tech />
-        <Works />
-        <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
