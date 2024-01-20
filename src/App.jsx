@@ -30,10 +30,9 @@ function App() {
         <Element name="experience">
           <Experience />
         </Element>
-        <div className="relative z-0">
+        <Element name="contact">
           <Contact />
-          <StarsCanvas />
-        </div>
+        </Element>
         <Element name="inprogress">
           <InProgress />
         </Element>
