@@ -7,6 +7,12 @@ nav.navbar {
     z-index: 9999;
     transition:  0.32s ease-in-out;
   }
+  @media only screen and (max-width: 768px) {
+    nav.navbar {
+        background-color: black; /* Replace with your desired background color */
+        opacity: 0.8;
+    }
+}
   nav.navbar.scrolled {
     padding: 0px 0;
     background-color: #121212;
