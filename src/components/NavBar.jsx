@@ -41,6 +41,13 @@ export default function NavBar() {
       });
     }
   };
+  const handleLinkClick = () => {
+    // Open the S3 URL in a new tab when the link is clicked
+    window.open(
+      "https://personal-items1.s3.ap-south-1.amazonaws.com/Aman_Resume.pdf",
+      "_blank"
+    );
+  };
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -57,8 +64,8 @@ export default function NavBar() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
               alignItems: "center",
+              flexWrap: "wrap",
             }}
           >
             <Nav.Link
@@ -87,6 +94,9 @@ export default function NavBar() {
               onClick={() => onUpdateActiveLink("skills")}
             >
               Skills
+            </Nav.Link>
+            <Nav.Link className="navbar-link" onClick={handleLinkClick}>
+              Download CV
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
