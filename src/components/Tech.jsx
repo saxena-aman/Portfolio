@@ -56,7 +56,7 @@ const TicketCard = ({ name, tech, index }) => (
 
 const Tech = () => {
   return (
-    <>
+    <section id="skills">
       <motion.dev variants={textVariant()}>
         <p
           className={titleStyles.sectionSubText}
@@ -81,7 +81,7 @@ const Tech = () => {
           />
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

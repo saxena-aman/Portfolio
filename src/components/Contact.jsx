@@ -65,11 +65,13 @@ const Contact = () => {
   };
   return (
     <div
+      id="contact"
       style={{
         display: "flex",
         flexDirection: window.innerWidth <= 768 ? "column-reverse" : "row",
         gap: "0px",
         height: window.innerWidth <= 768 ? "1000px" : "fit-content",
+        marginBottom: "30px",
       }}
     >
       <div
