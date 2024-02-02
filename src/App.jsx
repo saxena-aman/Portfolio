@@ -15,29 +15,31 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import InProgress from "./components/InProgress";
 function App() {
   return (
-    <BrowserRouter>
-      <div className="relative z-0">
-        <div className="MainContent">
-          <NavBar />
-          <Banner />
-        </div>
-        <Element name="about">
-          <About />
-        </Element>
-        <Element name="Tech">
-          <Tech />
-        </Element>
-        <Element name="experience">
-          <Experience />
-        </Element>
-        <Element name="contact">
-          <Contact />
-        </Element>
-        <Element name="inprogress">
+    <div className="main">
+      <BrowserRouter>
+        <div className="relative z-0">
+          <div>
+            <NavBar />
+            <Banner />
+          </div>
+          <Element name="about">
+            <About />
+          </Element>
+          <Element name="skills">
+            <Tech />
+          </Element>
+          <Element name="experience">
+            <Experience />
+          </Element>
+          <Element name="contact">
+            <Contact />
+          </Element>
+          {/* <Element name="inprogress">
           <InProgress />
-        </Element>
-      </div>
-    </BrowserRouter>
+        </Element> */}
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -61,12 +61,11 @@ export default function Banner() {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-
   return (
     <section
       className="banner"
       id="home"
-      style={{ transform: "translateY(-80px)" }}
+      style={{ transform: "translateY(-100px)" }}
     >
       <Container>
         <Row className="aligh-items-center">
@@ -102,9 +101,6 @@ export default function Banner() {
                     constellation, Where tech and creativity meet in perfect
                     formation.
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
                 </div>
               )}
             </TrackVisibility>

@@ -26,7 +26,21 @@ export default function NavBar() {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
 
+    if (contactSection) {
+      const { top, height } = contactSection.getBoundingClientRect();
+      const offset = top + window.scrollY + 100;
+      const screenHeight = window.innerHeight;
+      const scrollToPosition = offset - (screenHeight / 2 - height / 2);
+
+      window.scrollTo({
+        top: 4000,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -57,22 +71,22 @@ export default function NavBar() {
               Home
             </Nav.Link>
             <Nav.Link
-              href="#skills"
+              href="#experience"
               className={
                 activeLink === "skills" ? "active navbar-link" : "navbar-link"
+              }
+              onClick={() => onUpdateActiveLink("experience")}
+            >
+              Experience
+            </Nav.Link>
+            <Nav.Link
+              href="#skills"
+              className={
+                activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }
               onClick={() => onUpdateActiveLink("skills")}
             >
               Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#projects"
-              className={
-                activeLink === "projects" ? "active navbar-link" : "navbar-link"
-              }
-              onClick={() => onUpdateActiveLink("projects")}
-            >
-              Projects
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
@@ -96,7 +110,7 @@ export default function NavBar() {
               </a>
             </div>
             <div>
-              <button className="vvd">
+              <button className="vvd" onClick={scrollToContact}>
                 <span>Let’s Connect</span>
               </button>
             </div>
